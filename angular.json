@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "book-henri-potter-angular"
+    }
+  },
+  "defaultProject": "book-henri-potter-angular",
+  "cli": {
+    "analytics": "90a6cef3-5446-40dc-bb73-b15b2948b9b7"
+  }
 }

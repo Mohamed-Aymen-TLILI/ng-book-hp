@@ -21,4 +21,13 @@ export class BooksService {
            ))
   };
 
+  getBook(): Observable<Book>{
+    return this.http.get(`${ApiURL.baseUrl}/${ApiURL.booksUrl}`)
+            .pipe(
+              map((books: Array<object>) => { 
+          const book = books.filter((book) => book['isbn'] === isbn)[0]; 
+          return book ? new Book(book) : null; 
+        })
+      );
+  }
 }

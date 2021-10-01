@@ -21,7 +21,7 @@ export class BooksService {
            ))
   };
 
-  getBook(): Observable<Book>{
+  /* getBook(): Observable<Book>{
     return this.http.get(`${ApiURL.baseUrl}/${ApiURL.booksUrl}`)
             .pipe(
               map((books: Array<object>) => { 
@@ -29,5 +29,5 @@ export class BooksService {
           return book ? new Book(book) : null; 
         })
       );
-  }
+  } */
 }

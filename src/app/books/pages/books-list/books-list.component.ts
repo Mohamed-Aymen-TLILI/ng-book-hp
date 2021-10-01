@@ -9,20 +9,22 @@ import { BooksService } from '../../shared/books.service';
 })
 export class BooksListComponent implements OnInit {
 
-  books: Book[] = [];
-  loader: Boolean = false;
+  booksDisplayed: Book[] = [];
+  loader: boolean = false;
 
   constructor( private bService: BooksService) { }
 
   ngOnInit() {
+    this.getBooks();
   }
 
   getBooks (): void {
     this.loader = true;
     this.bService.getBooks()
         .subscribe((books: Book[]) =>{
+          this.booksDisplayed = books;
           this.loader = false;
-          this.books = books;
+          console.log(books);
         }, (error) => {
           this.loader = false;
           alert('Oups something went wrong !');

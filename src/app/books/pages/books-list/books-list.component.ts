@@ -25,9 +25,6 @@ export class BooksListComponent implements OnInit {
           this.booksDisplayed = books;
           this.loader = false;
           console.log(books);
-        }, (error) => {
-          this.loader = false;
-          alert('Oups something went wrong !');
         });
   }
 

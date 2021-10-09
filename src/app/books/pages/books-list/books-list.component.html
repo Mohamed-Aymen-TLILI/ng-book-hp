@@ -1,1 +1,8 @@
-<p>books-list works!</p>
+<ng-container *ngIf="!loader">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" >
+    <app-book *ngFor="let product of booksDisplayed" [book]="product"> </app-book>
+    </div>
+</ng-container>
+<ng-container *ngIf="loader">
+    <div>Chargement en cours...</div>
+</ng-container>

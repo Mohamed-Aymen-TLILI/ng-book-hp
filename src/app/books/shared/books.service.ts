@@ -10,12 +10,13 @@ import { ApiURL } from 'src/app/config/apiUrlConfigs';
 })
 export class BooksService {
 
+  private url = 'http://henri-potier.xebia.fr'
+
   constructor(private http: HttpClient) { }
 
   getBooks () {
-      return this.http.get(`${ApiURL.baseUrl}/${ApiURL.booksUrl}`)
+      return this.http.get<Book[]>(this.url + '/books')
             }
-        
   };
 
   /* getBook(): Observable<Book>{

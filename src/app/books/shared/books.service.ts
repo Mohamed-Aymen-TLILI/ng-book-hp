@@ -12,13 +12,10 @@ export class BooksService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks (): Observable<Book[]> {
+  getBooks () {
       return this.http.get(`${ApiURL.baseUrl}/${ApiURL.booksUrl}`)
-            .pipe(
-              map((books: Array<Object>) => {
-                return books.map ((book) => new Book(book))
-              }
-           ))
+            }
+        
   };
 
   /* getBook(): Observable<Book>{
@@ -30,4 +27,4 @@ export class BooksService {
         })
       );
   } */
-}
+

@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 import {BooksService} from './shared/books.service';
 import { BooksListComponent } from './pages/books-list/books-list.component';
@@ -21,7 +23,9 @@ import { LimitPipe } from './pages/book/limit.pipe';
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule
     
     
  ],

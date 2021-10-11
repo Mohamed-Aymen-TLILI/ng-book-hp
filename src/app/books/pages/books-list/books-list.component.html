@@ -1,5 +1,11 @@
 <ng-container *ngIf="!loader">
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" >
+            <div  fxLayout="column" style="margin:50px;">
+            <mat-form-field appearance="outline">
+                <mat-label>Search Form</mat-label>
+                <input matInput placeholder="Search Form">
+            </mat-form-field>
+            </div>
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <app-book *ngFor="let product of booksDisplayed" [book]="product"> </app-book>
     </div>
 </ng-container>

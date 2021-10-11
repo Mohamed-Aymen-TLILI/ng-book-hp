@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Book } from '../../shared/book';
 import { BooksService } from '../../shared/books.service';
 
@@ -12,7 +13,11 @@ export class BooksListComponent implements OnInit {
   booksDisplayed: Book[] = [];
   loader: boolean = false;
 
-  constructor( private bService: BooksService) { }
+  constructor( private bService: BooksService){ }
+    
+    searchForm = new FormGroup({
+    text: new FormControl('')
+  });
 
   ngOnInit() {
     this.getBooks();
